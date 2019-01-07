@@ -18,8 +18,11 @@ import permissions.dispatcher.OnShowRationale;
 import permissions.dispatcher.PermissionRequest;
 import permissions.dispatcher.RuntimePermissions;
 
+/**
+ * PermissionsDispatcher
+ */
 @RuntimePermissions
-public class Main2Activity extends AppCompatActivity {
+public class PermissionsDispatcherActivity extends AppCompatActivity {
     private Button call2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +36,7 @@ public class Main2Activity extends AppCompatActivity {
         call2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Main2ActivityPermissionsDispatcher.callPhoneWithPermissionCheck(Main2Activity.this);
+                PermissionsDispatcherActivityPermissionsDispatcher.callPhoneWithPermissionCheck(PermissionsDispatcherActivity.this);
             }
         });
     }
@@ -49,7 +52,7 @@ public class Main2Activity extends AppCompatActivity {
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        Main2ActivityPermissionsDispatcher.onRequestPermissionsResult(this, requestCode, grantResults);
+        PermissionsDispatcherActivityPermissionsDispatcher.onRequestPermissionsResult(this, requestCode, grantResults);
     }
 
     @OnShowRationale({Manifest.permission.READ_PHONE_STATE})

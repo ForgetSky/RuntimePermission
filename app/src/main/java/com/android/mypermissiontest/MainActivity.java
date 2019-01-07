@@ -24,12 +24,14 @@ public class MainActivity extends AppCompatActivity {
 
     private Button call;
     private Button start2Activity;
+    private Button start3Activity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         call = findViewById(R.id.call);
         start2Activity = findViewById(R.id.start_2activity);
+        start3Activity = findViewById(R.id.start_3activity);
     }
 
     @Override
@@ -49,10 +51,18 @@ public class MainActivity extends AppCompatActivity {
         start2Activity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+                Intent intent = new Intent(MainActivity.this, PermissionsDispatcherActivity.class);
                 MainActivity.this.startActivity(intent);
             }
         });
+        start3Activity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, RxPermissionsActivity.class);
+                MainActivity.this.startActivity(intent);
+            }
+        });
+
 
     }
 
