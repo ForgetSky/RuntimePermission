@@ -1,4 +1,4 @@
 # RuntimePermission
 Android6.0以后，运行时权限处理
 
-包含自定义实现方式和开源框架PermissionsDispatcher实现方式
+包含自定义实现方式和开源框架PermissionsDispatcher，RxPermissions实现方式
